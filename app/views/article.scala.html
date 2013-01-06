@@ -1,0 +1,4 @@
+@(article: Article, loggedinuser: String)(implicit request: RequestHeader, lang: Lang)
+@main(Messages("application.name"), loggedinuser) {
+		@views.html.showarticle(article)
+}

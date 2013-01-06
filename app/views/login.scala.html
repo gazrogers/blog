@@ -1,0 +1,4 @@
+@(loggedinuser: String)(implicit request: RequestHeader, lang: Lang)
+@main(Messages("application.name"), loggedinuser) {
+	<div id="login">@views.html.showlogingubbins(loggedinuser)</div>
+}

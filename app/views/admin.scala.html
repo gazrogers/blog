@@ -1,0 +1,14 @@
+@(articles: List[Article], loggedinuser: String)(implicit request: RequestHeader, lang: Lang)
+@main(Messages("application.name"), loggedinuser){
+	<ul class="admin">
+		<li><a href="@routes.Article.editor">New article</a></li>
+	@for(article<-articles){
+		<li>
+			<a href="@routes.Article.delete(article.id)">Delete</a>
+			<a href="@routes.Article.edit(article.id)">Edit</a>
+			@article.title
+			<time>@article.date</time>
+		</li>
+	}
+	</ul>
+}

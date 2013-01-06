@@ -1,0 +1,22 @@
+@(title: String, loggedinuser: String)(content: Html)(implicit request: RequestHeader, lang: Lang)<!DOCTYPE html>
+<html>
+<head>
+    <title>@title</title>
+    <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/persona.css")">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="@routes.Assets.at("javascripts/main.js")"></script>
+@if(loggedinuser==""){
+    <script>var user=null;</script>	
+} else {
+    <script>var user='@loggedinuser';</script>	
+}
+</head>
+<body>
+	<h1>@title</h1>
+    @content
+    <script src="https://login.persona.org/include.js"></script>
+</body>
+</html>

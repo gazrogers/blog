@@ -1,0 +1,148 @@
+@text-colour: #333;
+@line-colour: #ccc;
+@header-height: 100px;
+@subheading-height: 40px;
+@subheading-margin: 27px;
+@boxcolour: #ffc;
+
+html
+{
+	height: 100%;
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Lora', serif;
+	font-size: 18px;
+	line-height: 1.5em;
+	color: @text-colour;
+	height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-family: 'Cinzel', serif;
+}
+
+h1
+{
+	position: fixed;
+	width: 100%;
+	line-height: @header-height;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	border-bottom: 1px solid @line-colour;
+	background: #fff;
+	z-index: 1;
+}
+
+h2
+{
+	line-height: @subheading-height;
+	margin: @subheading-margin 0;
+	text-align: center;
+}
+
+time
+{
+	display: block;
+	margin-top: -2em;
+	font-size: 0.75em;
+	font-style: italic;
+	text-align: right;
+}
+
+article, form, ul
+{
+	margin: 0 auto;
+	padding: 0 1em;
+	min-width: 240px;
+	max-width: 800px;
+}
+
+ul
+{
+	list-style-type: none;
+}
+
+article:first-of-type, ul.admin
+{
+	padding: 100px 1em 2em 1em;
+}
+
+p:first-of-type
+{
+	margin-top: 0;
+}
+
+p:last-of-type
+{
+	margin-bottom: 0;
+}
+
+form + article:first-of-type
+{
+	padding: 0;
+	border: 1px dotted #ccc;
+}
+
+blockquote
+{
+	margin: 1em 40px;
+	padding: 0.75em;
+	background: @boxcolour;
+	font-size: 0.75em;
+	line-height: 1.5em;
+	border: 1px solid #ccc;
+}
+
+article pre
+{
+	margin: 1em 40px;
+	padding: 0.75em;
+	background: @boxcolour;
+	font-size: 0.75em;
+	line-height: 1.5em;
+	border: 1px solid #ccc;
+}
+
+code
+{
+	background: @boxcolour;
+}
+
+article ul, article ol
+{
+	padding-left: 40px;
+}
+
+#login
+{
+	text-align:center;
+	padding: 200px 0px;
+}
+
+form
+{
+	padding: 110px 0 0 0;
+}
+
+textarea
+{
+	width: 100%;
+	height: 200px;
+	padding: 5px;
+	font-size: 1em;
+	box-sizing: border-box;
+}
+
+input[name=title]
+{
+	font-size: 1em;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 5px;
+}

@@ -1,0 +1,6 @@
+@(article: Article)(implicit lang: Lang)
+	<article>
+		<h2>@article.title</h2>
+		<time datetime="@article.date">@java.text.DateFormat.getDateInstance().format(article.date)</time>
+		@Html(models.Article.parseMarkdownRedux(article.article))
+	</article>

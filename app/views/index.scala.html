@@ -1,0 +1,6 @@
+@(articles: List[Article], loggedinuser: String)(implicit request: RequestHeader, lang: Lang)
+@main(Messages("application.name"), loggedinuser) {
+	@for(article<-articles) {
+		@views.html.showarticle(article)
+	}
+}
