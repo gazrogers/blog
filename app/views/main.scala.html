@@ -15,7 +15,15 @@
 }
 </head>
 <body>
-	<h1>@title</h1>
+    <header>
+        <h1>@title</h1>
+        <nav>
+            <ul>
+                <li><a href="/blog/about/">About</a></li>
+                <li><a href="@routes.Article.admin">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
     @content
     <script src="https://login.persona.org/include.js"></script>
 </body>

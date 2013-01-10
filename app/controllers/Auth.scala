@@ -34,7 +34,7 @@ object Auth extends Controller
 			val promiseOfVerification=WS.url("https://verifier.login.persona.org/verify")
 				.post(Map(
 					"assertion" -> Seq(request.body("assertion").head),
-					"audience" -> Seq("http://localhost:9000")
+					"audience" -> Seq("http://www.garethrogers.net")
 				))
 			Async
 			{

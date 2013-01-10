@@ -1,9 +1,9 @@
 # --- !Ups
 
 CREATE TABLE articles (
-	id int auto_increment,
+	id serial,
 	title varchar(255),
-	`date` date,
+	"date" date,
 	article text
 )
 
